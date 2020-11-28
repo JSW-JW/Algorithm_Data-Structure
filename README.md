@@ -23,7 +23,7 @@ Repository for studying and storing algorithm, data structure information
                     break
             result += second
             m -= 1
-            if m == 0:  # in case m == -1, loop do not break
+            if m == 0:  # in case m == -1, loop do not break. should watch out!
                 break
 
         print(result)
