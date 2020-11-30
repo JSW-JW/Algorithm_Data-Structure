@@ -93,7 +93,7 @@ Repository for studying and storing algorithm, data structure information
         # result = max(firstIndexList)
         # print(result)
 
-    # 96p.
+# 96p.
     def CardGame():
         n, m = map(int, input().split())
         minList = []
@@ -110,7 +110,7 @@ Repository for studying and storing algorithm, data structure information
         print(result)
 
 
-    # 99p.
+# 99p.
     def getMinExecuteNum():
         n, k = map(int, input().split())
         execNum = 0
@@ -137,3 +137,136 @@ Repository for studying and storing algorithm, data structure information
 
 
     getMinExecuteNum()
+    
+        def calMoveCase():
+        current = input()
+        column_list = ["a", "b", "c", "d", "e", "f", "g", "h"]
+
+        column = current[0]
+        # e.g: a
+        row_position = int(current[1])
+        # e.g: 3
+        column_position = 0
+        result = 0
+        for i in range(len(column_list)):  # my awkward logic when I didn't know the concept: list of move case
+            if column_list[i] == column:  # (dx, dy or tuple data)
+                column_position = i + 1
+        if 3 <= column_position <= 6:
+            case = 2
+        else:
+            case = 1
+        if 2 <= row_position <= 7:
+            vertical = 2
+        else:
+            vertical = 1
+        result += case * vertical
+        if 3 <= row_position <= 6:
+            case2 = 2
+        else:
+            case2 = 1
+        if 2 <= column_position <= 7:
+            horizon = 2
+        else:
+            horizon = 1
+        result += case2 * horizon
+
+        print(result)
+
+# Implementation
+    def calculateMoveCase():
+        cur_pos = input()
+        row_pos = int(cur_pos[1])
+
+        col_pos = int(ord(cur_pos[0])) - int(ord('a')) + 1
+
+        step_x = [2, 2, -2, -2, 1, -1, 1, -1]
+        step_y = [1, -1, 1, -1, 2, 2, -2, -2]
+
+        count = 0
+        for i in range(len(step_x)):
+            mov_pos_x = col_pos + step_x[i]
+            mov_pos_y = row_pos + step_y[i]
+            if 1 <= mov_pos_x <= 8 and 1 <= mov_pos_y <= 8:
+                count += 1
+        print(count)
+
+
+# 118p.
+    def calMapCase():
+        n, m = map(int, input().split())
+        a, b, d = map(int, input().split())
+
+        trackwalk = []
+        mapdata = []
+        count = 0
+        confrontsea = False
+        for i in range(n):
+            data = list(map(int, input().split()))
+            mapdata.append(data)
+        directions = [(3, -1), (2, -1), (1, 1), (0, 1)]
+        while not confrontsea:
+            d -= 1
+            if d == -1:
+                d = 3
+            for direction in directions:
+                if d == direction[0]:
+                    if direction[0] % 2 == 0:
+                        predictPath = a + direction[1]
+                        if (predictPath, b) not in trackwalk and mapdata[b][a] != 1:
+                            count += 1
+                            a = predictPath
+                    else:
+                        predictPath = b + direction[1]
+                        if (a, predictPath) not in trackwalk and mapdata[b][a] != 1:
+                            count += 1
+                            b = predictPath
+        print(count)
+
+
+    def correctionMapCase():
+        n, m = map(int, input().split())
+        a, b, d = map(int, input().split())
+
+        # 북, 동, 남, 서 (0, 1, 2, 3)
+        track_walk = [[0] * m for _ in range(n)]
+        mapInFo = []
+        for i in range(n):
+            mapInFo.append(list(map(int, input().split())))
+
+        dirInfo = [(-1, 0), (0, 1), (1, 0), (0, -1)]
+        turn_count = 0
+
+        result = 1
+        track_walk[a][b] = 1
+
+        while True:
+            d -= 1
+            if d == -1:
+                d = 3
+
+            na = a + dirInfo[d][0]
+            nb = b + dirInfo[d][1]
+            if track_walk[na][nb] == 0 and mapInFo[na][nb] == 0:
+                turn_count = 0
+                result += 1
+                a = na
+                b = nb
+                track_walk[na][nb] = 1
+                continue
+            else:
+                turn_count += 1
+            if turn_count == 4:
+                a_back = a - dirInfo[d][0]
+                b_back = b - dirInfo[d][1]
+                if mapInFo[na][nb] == 0:
+                    a = a_back
+                    b = b_back
+                    track_walk[a][b] = 1
+                else:
+                    break
+                turn_count = 0
+        print(result)
+
+
+    correctionMapCase()
+
