@@ -1,6 +1,9 @@
 # Algorithm_Data-Structure
 Repository for studying and storing algorithm, data structure information
 
+151p.
+[DFS] 대표 예제 https://gist.github.com/JSW-JW/eea46358786ae4764b2d93266909aa70
+
 93p.
 
     from time import time
