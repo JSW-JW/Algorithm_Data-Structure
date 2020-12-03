@@ -11,6 +11,8 @@ Repository for studying and storing algorithm, data structure information
 
 [GraphDistance(BFS)](https://gist.github.com/JSW-JW/17dbdb0e4b8f03ca860a8be9b8ec4b8f)
 
+[Empty Output Error(BFS Tree)](https://gist.github.com/JSW-JW/c3849fce46e849382ec1b048960ed44a)
+
 93p.
 
     from time import time
