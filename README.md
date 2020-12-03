@@ -9,6 +9,8 @@ Repository for studying and storing algorithm, data structure information
 154p.
 [BFS 대표 예제](https://gist.github.com/JSW-JW/ef56d341d30f3f3895bf35e47d29ef7c)
 
+[GraphDistance(BFS)](https://gist.github.com/JSW-JW/17dbdb0e4b8f03ca860a8be9b8ec4b8f)
+
 93p.
 
     from time import time
