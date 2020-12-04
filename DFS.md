@@ -39,6 +39,6 @@ def digitTreeSum(t):
             sum += w
     return sum
 ```
-*My First own code!*
+*My own code for the first time!*
 
 
