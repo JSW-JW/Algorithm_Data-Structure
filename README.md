@@ -13,6 +13,8 @@ Repository for studying and storing algorithm, data structure information
 
 [Empty Output Error(BFS Tree)](https://gist.github.com/JSW-JW/c3849fce46e849382ec1b048960ed44a)
 
+[Node Tree Search(BFS or DFS)](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/DFS.md)
+
 93p.
 
     from time import time
