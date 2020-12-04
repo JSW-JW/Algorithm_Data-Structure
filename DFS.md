@@ -19,7 +19,7 @@ Source code from code signal (https://app.codesignal.com/interview-practice)
         traverseAndLogTree(node.left, row + 1)
         traverseAndLogTree(node.right, row + 1)
     
-* One of the way to search Node Tree and the way to solve it can be different depending on their perspectives. *
+*One of the way to search Node Tree and the way to solve it can be different depending on their perspectives.*
 
 ```
 def digitTreeSum(t):
@@ -39,6 +39,6 @@ def digitTreeSum(t):
             sum += w
     return sum
 ```
-* My First own code! *
+*My First own code!*
 
 
