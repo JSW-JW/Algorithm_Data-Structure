@@ -15,6 +15,8 @@ Repository for studying and storing algorithm, data structure information
 
 [Node Tree Search(BFS or DFS)](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/DFS.md)
 
+[입출력 예제](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/input_output.md)
+
 93p.
 
     from time import time
