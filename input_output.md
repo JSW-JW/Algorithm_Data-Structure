@@ -29,5 +29,5 @@ https://www.acmicpc.net/problem/2588 BOJ input_output step last problem.
       if data[i] < x:
           print(data[i], end=" ")
   ```
-  
-  **백준-2438번 - How to print in the same line**
+  https://www.acmicpc.net/problem/10871
+  **How to print in the same line**
