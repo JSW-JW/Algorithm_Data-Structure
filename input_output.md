@@ -21,3 +21,12 @@ https://www.acmicpc.net/problem/2588 BOJ input_output step last problem.
   print(line_5)
   print(tot)
   ```
+  
+  ```
+  n, x = map(int, input().split())
+  data = list(map(int, input().split()))
+  for i in range(n):
+      if data[i] < x:
+          print(data[i], end=" ")
+  ```
+  **How to print in the same line**
