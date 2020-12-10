@@ -7,7 +7,7 @@ Repository for studying and storing algorithm, data structure information
 
 [while문 변수 네이밍의 중요성](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/while.md)
 
-[1차원 배열](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/list.md) - 간결한 코드
+[1차원 배열](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/list.md)
 
 
 **Mistake Notes**
