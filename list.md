@@ -1,4 +1,4 @@
-https://www.acmicpc.net/problem/2562 백준 2562번 문제
+https://www.acmicpc.net/problem/2562 백준 2562번
 
 ```
 max_val = 0
@@ -15,7 +15,7 @@ print(max_val_order)
 
 shortened code
 
-
+https://www.acmicpc.net/problem/2577 백준 2577번
 ```
 a = int(input())
 b = int(input())
