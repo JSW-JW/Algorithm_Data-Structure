@@ -14,3 +14,28 @@ print(max_val_order)
 ```
 
 shortened code
+
+
+```
+a = int(input())
+b = int(input())
+c = int(input())
+multi_val = str(a*b*c)
+for i in range(10):
+    count = 0
+    for j in range(len(multi_val)):
+        if multi_val[j] == str(i):
+            count += 1
+    print(count)
+```
+```
+a = int(input())
+b = int(input())
+c = int(input())
+multi_val = str(a*b*c)
+for i in range(10):
+    res = multi_val.count(str(i))
+    print(res)
+```
+
+shortend code
