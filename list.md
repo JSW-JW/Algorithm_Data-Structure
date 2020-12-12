@@ -13,7 +13,7 @@ print(max_val)
 print(max_val_order)
 ```
 
-shortened code
+shorten code
 
 https://www.acmicpc.net/problem/2577 백준 2577번
 ```
@@ -38,4 +38,32 @@ for i in range(10):
     print(res)
 ```
 
-shortend code
+shorten code
+
+
+https://www.acmicpc.net/problem/3052 백준 3052번
+
+```
+input_list = []
+count = 1
+for _ in range(10):
+    input_list.append(int(input())%42)
+input_list.sort()
+for i in range(len(input_list)-1):
+    if input_list[i] != input_list[i+1]:
+        count += 1
+print(count)
+        
+```
+Without 'set'
+
+```
+input_list = []
+for _ in range(10):
+    input_list.append(int(input())%42)
+res = set(input_list)
+    
+print(len(res))
+``` 
+With 'set'
+shorten code.
