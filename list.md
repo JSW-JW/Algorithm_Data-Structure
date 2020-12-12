@@ -67,3 +67,40 @@ print(len(res))
 ``` 
 With 'set'
 shorten code.
+
+
+https://www.acmicpc.net/problem/4344 백준 4344번.
+
+```
+from collections import deque
+
+n = int(input())
+
+for _ in range(n):
+    sc_deq = deque(list(map(int, input().split())))
+    num = sc_deq.popleft()
+    sc_list = list(sc_deq)
+    avg = sum(sc_list)/num
+    avg_abv = 0
+    for i in range(num):
+        if sc_list[i] > avg:
+            avg_abv += 1;
+    res = avg_abv/num * 100
+    print(f'{res:.3f}%')
+```
+my awkward code using deque;;
+
+```
+n = int(input())
+
+for _ in range(n):
+    nums = list(map(int, input().split()))
+    avg = sum(nums[1:])/nums[0]  # 평균을 구함 (nums[0]: 학생수, nums[1:] 점수)
+    cnt = 0
+    for score in nums[1:]:
+        if score > avg:
+            cnt += 1  # 평균 이상인 학생 수
+    rate = cnt/nums[0] *100
+    print(f'{rate:.3f}%')
+```
+shorten code.
