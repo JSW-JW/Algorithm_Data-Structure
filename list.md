@@ -104,3 +104,18 @@ for _ in range(n):
     print(f'{rate:.3f}%')
 ```
 shorten code.
+
+```
+n = int(input())
+for _ in range(n):
+    score = 0
+    accm = 0
+    res = input()
+    for i in range(len(res)):
+        if res[i] == 'O':  // My Mistake: forgot to single quote '' , thus run time error
+            accm += 1
+            score += accm
+        else:
+            accm = 0
+    print(score)
+```
