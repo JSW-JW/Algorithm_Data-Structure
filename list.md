@@ -119,3 +119,82 @@ for _ in range(n):
             accm = 0
     print(score)
 ```
+
+https://www.acmicpc.net/problem/4673 백준 4673번
+```
+def is_self_number(n):
+    if n == 1:
+        print(n)
+        return True
+    elif 1 < n < 10:
+        for i in range(1, n):
+            dcml_val = 0
+            n_str = str(i)
+            l = len(n_str)
+            for j in range(l):
+                dcml_val += int(n_str[j])
+                if i + dcml_val == n:
+                    return False
+        print(n)
+        return True
+    
+    elif 10 <= n < 100:
+        for i in range(1, n):
+            dcml_val = 0
+            n_str = str(i)
+            l = len(n_str)
+            for j in range(l):
+                dcml_val += int(n_str[j])
+                if i + dcml_val == n:
+                    return False
+        print(n)
+        return True
+    
+    elif 100 <= n < 1000:
+        for i in range(n-30, n):
+            dcml_val = 0
+            n_str = str(i)
+            l = len(n_str)
+            for j in range(l):
+                dcml_val += int(n_str[j])
+                if i + dcml_val == n:
+                    return False
+        print(n)
+        return True
+    
+    else:
+        for i in range(n-50, n):
+            dcml_val = 0
+            n_str = str(i)
+            l = len(n_str)
+            for j in range(l):
+                dcml_val += int(n_str[j])
+                if i + dcml_val == n:
+                    return False
+        print(n)
+        return True
+
+for i in range(1, 10001):
+    is_self_number(i)
+```
+
+My very very bad code... :(
+
+```
+def d(n):
+    a = 0
+    for x in list(str(n)):
+        a = a + int(x) 
+    return int(n) + a
+a= []
+for i in range(1,10001):
+    k = d(i)
+    a.append(k)
+
+for b in range(1, 10001):
+    if b in a:
+        pass
+    else:
+        print(b)
+```
+It can add each place's int value from the list(str) variable. 
