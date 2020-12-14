@@ -9,6 +9,8 @@ Repository for studying and storing algorithm, data structure information
 
 [1차원 배열](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/list.md)
 
+[문자열 다루기](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/str.md)
+
 
 **Mistake Notes**
 
