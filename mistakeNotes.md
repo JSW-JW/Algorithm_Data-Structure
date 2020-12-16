@@ -7,34 +7,38 @@ def solution(genres, plays):
     res = []
     prev = set(res)
     genre_set = set(genres)
-    
+
     while prev != genre_set:  
         max_genre = get_max_genre(genres, plays, prev)
+        
         prev.add(max_genre)
 
-        greater_plays = -1
-        max_count = 0
+        greater_plays = -10
+        repeat = 0
         
-        while max_count < 2:
+        while repeat < 2:
             for i, genre in enumerate(genres):
-                if genre == max_genre and plays[i] != -1 and max_count < 2:
+                if genre == max_genre and plays[i] != -1:
                     if greater_plays == plays[i]:
                         pass
                     else:
                         greater_plays=max(greater_plays, plays[i])
-            max_count += 1
             
             for i in range(len(plays)):
                 if plays[i] == greater_plays:
                     res.append(i)
-                    plays[i] == -1
-                    greater_plays = -1
+                    plays[i] = -1
+            greater_plays = -10
+            repeat += 1
+            
+    return res
     
         
 
 
-def get_max_genre(genres, plays, prev = None):
+def get_max_genre(genres, plays, prev):
     genre_plays = {}
+
     for i, genre in enumerate(genres):
         if genre not in genre_plays:
             genre_plays[genre] = plays[i]
@@ -47,6 +51,8 @@ def get_max_genre(genres, plays, prev = None):
         if genre_plays[key] == max_val:
             return key
 ```
+
+예외 케이스 찾아보고 다시 풀어보기
 
 
 
