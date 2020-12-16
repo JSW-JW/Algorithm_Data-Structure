@@ -5,7 +5,7 @@ def solution(participant, completion):
     return list(answer.keys())[0]
 
 
-https://programmers.co.kr/learn/courses/30/lessons/42577 프로그래머스 전화번호 목록
+[프로그래머스 전화번호 목록](https://programmers.co.kr/learn/courses/30/lessons/42577)
 
 ```
 def solution(phone_book):
@@ -20,7 +20,7 @@ def solution(phone_book):
     return answer
 ```
 
-https://programmers.co.kr/learn/courses/30/parts/12077 프로그래머스 베스트 앨범
+[프로그래머스 베스트 앨범](https://programmers.co.kr/learn/courses/30/parts/12077)
 ```
 def solution(genres, plays):
     res = []
@@ -103,7 +103,7 @@ def solution(genres, plays):
 (87.7점) 예외 케이스 찾아서 refactor 하기
 
 
-https://app.codesignal.com/interview-practice/topics/hash-tables Code Signal Hash Table(GroupingDishes)
+[Code Signal Hash Table(GroupingDishes)](https://app.codesignal.com/interview-practice/topics/hash-tables)
 ```
 from collections import defaultdict
 def groupingDishes(dishes):
