@@ -1,5 +1,57 @@
 **my mistake notes**
 
+
+프로그래머스 베스트앨범
+```
+def solution(genres, plays):
+    res = []
+    prev = set(res)
+    genre_set = set(genres)
+    
+    while prev != genre_set:  
+        max_genre = get_max_genre(genres, plays, prev)
+        prev.add(max_genre)
+
+        greater_plays = -1
+        max_count = 0
+        
+        while max_count < 2:
+            for i, genre in enumerate(genres):
+                if genre == max_genre and plays[i] != -1 and max_count < 2:
+                    if greater_plays == plays[i]:
+                        pass
+                    else:
+                        greater_plays=max(greater_plays, plays[i])
+            max_count += 1
+            
+            for i in range(len(plays)):
+                if plays[i] == greater_plays:
+                    res.append(i)
+                    plays[i] == -1
+                    greater_plays = -1
+    
+        
+
+
+def get_max_genre(genres, plays, prev = None):
+    genre_plays = {}
+    for i, genre in enumerate(genres):
+        if genre not in genre_plays:
+            genre_plays[genre] = plays[i]
+        else:
+            genre_plays[genre] += plays[i]
+    max_val = -1
+    for key in genre_plays:
+        max_val = max(max_val, genre_plays[key])
+    for key in genre_plays:
+        if genre_plays[key] == max_val:
+            return key
+```
+
+
+
+
+
 93p.
 
 ```
