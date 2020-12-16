@@ -71,3 +71,33 @@ def get_max_genre(genres, plays, prev):
             return key
 ```
 
+reviewed code.
+
+```
+from collections import defaultdict
+from operator import itemgetter
+def solution(genres, plays):
+    genre_play_dict = defaultdict(int)
+    for genre, play in zip(genres, plays):
+        genre_play_dict[genre] += play
+    
+    genre_rank = [genre for genre, play in sorted(genre_play_dict.items(),
+                                                  key=itemgetter(1), reverse=True)]
+    
+    final_dict = defaultdict(lambda: [])
+    for i, genre_play_tuple in enumerate(zip(genres, plays)):
+        final_dict[genre_play_tuple[0]].append((genre_play_tuple[1], i))
+    
+    # {"classic": [(500, 0), (150, 2), (800, 3)], "pop": [(600, 1), (2500, 4)]}
+    res = []
+    for genre in genre_rank:
+        sorted_list = [j for i, j in sorted(final_dict[genre], reverse=True)]
+        if len(sorted_list) > 1:
+            res.append(sorted_list[0])
+            res.append(sorted_list[1])
+        else:
+            res.append(sorted_list[0])
+    
+    return res
+```
+(87.7점) 예외 케이스 찾아서 refactor 하기
