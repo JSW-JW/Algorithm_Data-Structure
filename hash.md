@@ -101,3 +101,26 @@ def solution(genres, plays):
     return res
 ```
 (87.7점) 예외 케이스 찾아서 refactor 하기
+
+
+https://app.codesignal.com/interview-practice/topics/hash-tables Code Signal Hash Table(GroupingDishes)
+```
+from collections import defaultdict
+def groupingDishes(dishes):
+    ingr_dict = defaultdict(lambda: [])
+    for lst in dishes:
+        for j in range(1, len(lst)):
+            ingr_dict[lst[j]].append(lst[0])
+    # {"Cheese": ["Quesadilla", "Sandwich"], "Salad": ["Salad", "Sandwich"], ...}
+    ingr_list = []
+    dish_list = []
+    for key, value in sorted(ingr_dict.items()):
+        if len(value) >= 2:
+            ingr_list.append(key)
+            dish_list.append(sorted(value))
+    for i in range(len(dish_list)):
+        dish_list[i].insert(0, ingr_list[i])
+        
+    return dish_list
+    
+```
