@@ -26,3 +26,33 @@ def solution(bridge_length, weight, truck_weights):
     return answer
 ```
 **My Wrong Code**
+
+refactor
+
+```
+from collections import deque
+def solution(bridge_length, weight, truck_weights):
+    bridge_on = deque([0] * bridge_length)
+    truck_weights = deque(truck_weights)
+    time = 0
+    while truck_weights:
+        time += 1
+        if sum(bridge_on) + truck_weights[0] <= weight: 
+            w = truck_weights.popleft()
+            bridge_on.popleft()
+            bridge_on.append(w)
+        else:
+            bridge_on.popleft()
+            if truck_weights and sum(bridge_on) + truck_weights[0] <= weight :
+                bridge_on.append(truck_weights.popleft())
+            else:
+                bridge_on.append(0)
+                
+    while sum(bridge_on) > 0:
+        time += 1
+        bridge_on.popleft()
+        bridge_on.append(0)
+
+    return time
+```
+1 test case time over
