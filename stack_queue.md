@@ -1,3 +1,33 @@
+[프로그래머스 프린터](https://programmers.co.kr/learn/courses/30/parts/12081)
+
+```
+from collections import deque
+def solution(priorities, location):
+    answer = 0
+    my_file_pos = location
+    priorities = deque(priorities)
+    
+    while priorities:
+        cycle = False
+        v = priorities.popleft()
+        for priority in priorities:
+            if v < priority:
+                cycle = True
+                priorities.append(v)
+                if my_file_pos == 0:
+                    my_file_pos = len(priorities)-1
+                else:
+                    my_file_pos -= 1
+                break
+        if not cycle:
+            answer += 1
+            if my_file_pos == 0:
+                return answer
+            else:
+                my_file_pos -= 1
+```
+
+
 [프로그래머스 다리를 지나는 트럭](https://programmers.co.kr/learn/courses/30/lessons/42583)
 ```
 from collections import deque
