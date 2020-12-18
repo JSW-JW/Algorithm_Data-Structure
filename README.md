@@ -13,6 +13,8 @@ Repository for studying and storing algorithm, data structure information
 
 [해쉬](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/hash.md)
 
+[그리디](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/greedy.md)
+
 
 **Mistake Notes**
 
