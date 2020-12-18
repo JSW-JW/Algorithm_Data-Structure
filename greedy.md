@@ -43,6 +43,6 @@ def solution(n, lost, reserve):
             _lost.remove(b)
     return n - len(_lost)
 ```
-위의 코드와 로직은 크게 다르지 않지만, 1. 처음에 예외 케이스를 걸러주는 부분에서 코드 가독성이 좋고
-2. iterator 변수와 loop 안에서 remove해주는 list의 변수를 다른 것으로 설정하여 iterating 하는 과정에서
-오류가 날 가능성이 없음.
+**위의 코드와 로직은 크게 다르지 않지만,
+1. 처음에 예외 케이스를 걸러주는 부분에서 코드 가독성이 좋고**
+**2. iterator 변수와 loop 안에서 remove해주는 list의 변수를 다른 것으로 설정하여 iterating 하는 과정에서 오류가 날 가능성이 없음**
