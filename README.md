@@ -15,6 +15,8 @@ Repository for studying and storing algorithm, data structure information
 
 [그리디](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/greedy.md)
 
+[정렬](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/sort.md)
+
 
 **Mistake Notes**
 
