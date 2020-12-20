@@ -64,6 +64,15 @@ failed code.. Logic wrong at all.. :(
 I should've known the way 'string' is sorted.
 
 ```
+from itertools import permutations
+def solution(num):
+permute = list(permutations(num,len(num)))
+list_permute = [''.join(map(str,i)) for i in permute]
+answer = max(list_permute)
+return answer
+```
+And if using permutations, it might be time over if 'N' is great enough.
+```
 def solution(numbers):
     numbers = list(map(str, numbers))
     numbers.sort(key = lambda x: x*3, reverse=True)
