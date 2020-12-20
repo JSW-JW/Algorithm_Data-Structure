@@ -26,3 +26,38 @@ def solution(array, commands):
 ```
 
 single line code.. !!
+
+
+[프로그래머스 가장 큰 수](https://programmers.co.kr/learn/courses/30/parts/12198)
+
+```
+def solution(numbers):
+    answer = ''
+    num_list = []
+    for i in range(1, 10):
+        for number in numbers:
+            if str(number)[0] == str(10-i):
+                num_list.append(str(number))
+        if num_list:
+            checkList(num_list, answer)
+                
+    return answer
+
+def checkList(num_list, answer):
+    ck_list = []
+    int_num_list = list(map(int, num_list))
+    max_len = len(str(max(int_num_list)))
+    for i in range(max_len):
+        for num in num_list:
+            if len(num) == i+1:
+                ck_list.append(int(num))
+        while ck_list:
+            max_val = max(ck_list)
+            answer += str(max_val)
+            ck_list.remove(max_val)
+            
+            
+numbers = [6, 10, 2]
+solution(numbers)
+```
+failed code.. Logic wrong at all.. :(
