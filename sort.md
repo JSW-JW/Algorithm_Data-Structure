@@ -79,7 +79,7 @@ def solution(numbers):
     return str(int(''.join(numbers)))
 ```
 
-[프로그래머스 H-Index](https://programmers.co.kr/learn/courses/30/parts/12198)
+[프로그래머스 H-Index](https://programmers.co.kr/learn/courses/30/parts/12198) 문제에 필요없는 보충 설명이 들어가 있는 느낌..
 
 ```
 def solution(citations):
