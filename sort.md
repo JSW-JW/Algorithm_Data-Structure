@@ -79,3 +79,19 @@ def solution(numbers):
     return str(int(''.join(numbers)))
 ```
 
+[프로그래머스 H-Index]
+
+```
+def solution(citations):
+    answer = 0
+    cited = 0
+    n = len(citations)
+    for h in range(1, n+1):
+        for citation in citations:
+            if citation >= h:
+                cited += 1
+        if cited >= h:
+            answer = h
+            cited = 0
+    return answer
+```
