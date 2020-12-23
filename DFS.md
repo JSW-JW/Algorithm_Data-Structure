@@ -41,4 +41,20 @@ def digitTreeSum(t):
 ```
 *My own code for the first time!*
 
-
+[프로그래머스 타겟 넘버](https://programmers.co.kr/learn/courses/30/parts/12421)
+```
+def solution(numbers, target):
+    n = len(numbers)
+    count = 0
+    
+    def dfs(depth, ttl):
+        if depth == n:
+            if ttl == target:
+                nonlocal count
+                count += 1
+        else:
+            dfs(depth+1, ttl + numbers[depth])
+            dfs(depth+1, ttl - numbers[depth])
+    dfs(0, 0)
+    return count
+```
