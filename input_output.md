@@ -9,6 +9,8 @@ for i in a:
 ```
 
 assign several lines input using 'sys'
+<br>
+<br>
 
 https://www.acmicpc.net/problem/2588 BOJ input_output step last problem.
   ```
