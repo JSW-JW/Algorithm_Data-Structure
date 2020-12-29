@@ -1,3 +1,15 @@
+```
+import sys
+
+n = int(input())
+a = [sys.stdin.readline() for i in range(n)]
+
+for i in a:
+  print(i)
+```
+
+assign several lines input using 'sys'
+
 https://www.acmicpc.net/problem/2588 BOJ input_output step last problem.
   ```
   x = list(input() for _ in range(2))  # assign several lines(2 in this case) input into list.
