@@ -31,7 +31,7 @@ for order in order_list:
 
 should state 'return' when calling function inside function and return the value, or it will return none.
 
-**FOR EXAMPLE,** _this returns Null_
+**FOR EXAMPLE,** _this returns None, although written expecting to return int value_
 ```
 n = int(input())
 store_list = list(map(int, input().split()))
