@@ -141,3 +141,25 @@ def solution(numbers, target):
     s = list(map(sum, product(*l))) // 변수 l을 unpacking 해줌으로써, 튜플 여러개(iterable한 요소)를 product의 인자로 넣어줌.
     return s.count(target)
 ```
+
+
+```
+# Recursive Python function to solve the tower of hanoi 
+  
+def TowerOfHanoi(n , source, destination, auxiliary): 
+    if n==1: 
+        print "Move disk 1 from source",source,"to destination",destination 
+        return
+    TowerOfHanoi(n-1, source, auxiliary, destination) 
+    print "Move disk",n,"from source",source,"to destination",destination 
+    TowerOfHanoi(n-1, auxiliary, destination, source) 
+          
+# Driver code 
+n = 4
+TowerOfHanoi(n,'A','B','C')  
+# A, C, B are the name of rods 
+  
+# Contributed By Dilip Jain 
+```
+
+Tower of Hanoi Phtyon code.
