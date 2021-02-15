@@ -39,4 +39,4 @@ Repository for studying and storing algorithm, data structure information
 
 **HUFS Course - Data Structure
 
-[자료구조와 알고리즘](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/GCD.md)
+[2강 - 자료구조와 알고리즘](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/GCD.md)
