@@ -36,3 +36,7 @@ Repository for studying and storing algorithm, data structure information
 [DFS 대표 예제](https://gist.github.com/JSW-JW/eea46358786ae4764b2d93266909aa70)
 
 [코드 시그널 DFS 예제](https://gist.github.com/JSW-JW/11ed9f350b830bafb270f18de3f4b51c)
+
+**HUFS Course - Data Structure
+
+[자료구조와 알고리즘](https://github.com/JSW-JW/Algorithm_Data-Structure/blob/main/GCD.md)
