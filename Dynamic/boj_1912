@@ -1,0 +1,18 @@
+# 부분합 문제
+
+```
+import sys
+
+input = sys.stdin.readline
+
+n = int(input())
+l = list(map(int, input().split()))
+d = [l[0]] + [0] * (n-1)
+m = l[0]
+
+for i in range(1, n):
+    d[i] = max(l[i], d[i-1] + l[i])
+    m = max(d[i], m)
+    
+print(m)
+```
