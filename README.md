@@ -1,1 +1,1 @@
-### Repository for Everyday Algorithm Trial & Error Notes
+### Everyday Algorithm Trial & Error Notes
