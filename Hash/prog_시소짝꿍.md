@@ -36,7 +36,7 @@ def solution(weights):
 ```
 
 
-#### 내가 생각하는 모범 답안
+#### 내가 생각하는 다른 분의 모범 답안
 ```python
 from collections import defaultdict
 
